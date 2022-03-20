@@ -12,7 +12,7 @@ impl Shell {
         }
     }
 
-    pub fn Write(&self, cmd: &str) -> &str {
+    pub fn Write(&self, cmd: &str) -> String {
         self.pipe.Write(cmd)
     }
 
@@ -31,8 +31,8 @@ impl Pipe {
         }
     }
 
-    fn Write(&self, info: &str) -> &str {
-        "empty write information!"
+    fn Write(&self, info: &str) -> String {
+        String::from("empty write information!")
     }
 }
 
